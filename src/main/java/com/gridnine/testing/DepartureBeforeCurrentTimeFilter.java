@@ -5,7 +5,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 /**
- * 1. Исключает перелеты с вылетом до текущего момента времени.
+ * 1. Exclude flights departing up to the current point in time.
  */
 
 public class DepartureBeforeCurrentTimeFilter implements Filter {

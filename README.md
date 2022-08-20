@@ -1,14 +1,21 @@
-Задача решена при помощи паттерна Стратегия.
-Код покрыт юнит-тестами.
+The task was solved using the Strategy pattern.
 
-Постановка задачи:
-Имеется некая система, которая обрабатывает авиа перелёты. Перелёт — это перевозка пассажира из одной точки в другую с возможными промежуточными посадками. Т. о. перелёт можно представить как набор из одного или нескольких элементарных перемещений, называемых сегментами. Сегмент — это атомарная перевозка, которую для простоты будем характеризовать всего двумя атрибутами: дата/время вылета и дата/время прилёта.
-Вам нужно написать небольшой модуль, который будет заниматься фильтрацией набора перелётов согласно различным правилам. Правил фильтрации может быть очень много. Также наборы перелётов могут быть очень большими. Правила могут выбираться и задаваться динамически в зависимости от контекста выполнения операции фильтрации.
-Продумайте структуру модуля, создайте необходимые классы и интерфейсы. Если знакомы с Junit, то покройте свой код тестами. Пользовательский интерфейс не рассматривайте. Достаточно вывода информации в консоль. Никаких сторонних библиотек использовать не нужно.
-Приложенный файл TestClasses.java содержит упрощённые модельные классы и фабрику для получения тестовых образцов. Весь код необходимо поместить в пакет com.gridnine.testing
-Для проверочного запуска создайте публичный класс Main c методом main() Этот метод должен выдать в консоль результаты обработки тестового набора перелётов. Получить тестовый набор нужно методом FlightBuilder.createFlights()
-Поместите в main() такой проверочный код. Исключите из тестового набора перелёты по следующим правилам (по каждому правилу нужен отдельный вывод списка перелётов):
-1.	вылет до текущего момента времени
-2.	имеются сегменты с датой прилёта раньше даты вылета
-3.	общее время, проведённое на земле превышает два часа (время на земле — это интервал между прилётом одного сегмента и вылетом следующего за ним)
+Task:
+There is a certain system that processes air travel. A flight is the transportation of a passenger from one point to
+another with possible intermediate landings. Flight can be represented as a set of one or more elementary movements
+called segments. A segment is an atomic transportation, which, for simplicity, we will characterize as a whole
+two attributes: date/time of departure and date/time of arrival.
+You need to write a small module that will filter a set of flights according to different rules. There can be a lot of
+filtering rules. Also sets of flights can be very large. Rules can be set dynamically depending on the context of the
+filtering operation.
+Think over the structure of the module, create the necessary classes and interfaces. If you are familiar with Junit,
+then cover your code tests. Do not consider the user interface. It is enough to output information to the console. No
+third party libraries do not need to be used.
+
+Exclude flights from the test set according to the following rules (each rule requires a separate output of the list
+of flights):
+1. departure to the current point in time.
+2. there are segments with an arrival date earlier than the departure date.
+3. the total time spent on the ground exceeds two hours (time on the ground is the interval between arrivals of one
+segment and the departure of the next one).
 

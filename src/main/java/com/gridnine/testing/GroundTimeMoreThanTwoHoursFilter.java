@@ -5,7 +5,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * 3. Исключает перелеты если общее время, проведённое на земле превышает два часа.
+ * 3. Exclude flights if the total time spent on the ground exceeds two hours.
  */
 
 public class GroundTimeMoreThanTwoHoursFilter implements Filter {

@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * 2. Исключает перелеты если есть сегменты с датой прилёта раньше даты вылета.
+ * 2. Exclude flights if there are segments with an arrival date earlier than the departure date.
  */
 
 public class ArrivalBeforeDepartureFilter implements Filter{
